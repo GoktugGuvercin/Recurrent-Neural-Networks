@@ -14,4 +14,7 @@ input sequences in one batch is set to termination condition of loop for dynamic
 automatically obliges all input sequences in one batch to be of same length, but not for the ones from different batches. Stochastic model 
 training (batch size = 1) enables us to operate on varied length of input sequences without padding or truncating them.
 
-![Static vs Dynamic RNN](https://github.com/GoktugGuvercin/Recurrent-Neural-Networks/blob/main/Dynamic%20and%20Static%20RNNs/Dynamic%20and%20Static%20RNNs.png)
+<p align="center">
+  <img src="https://github.com/GoktugGuvercin/Recurrent-Neural-Networks/blob/main/Dynamic%20and%20Static%20RNNs/Dynamic%20and%20Static%20RNNs.png" />
+</p>
+
