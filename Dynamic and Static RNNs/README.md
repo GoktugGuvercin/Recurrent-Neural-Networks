@@ -19,3 +19,17 @@ training (batch size = 1) enables us to operate on varied length of input sequen
 * Secondly, static RNNs are built before being fed by input, and its architecture cannot be changed, is completely fixed. In fact, how many number of operation nodes will be accommodated in static RNNs is determined by taking into account the length of input sequences. Hence, variable-length sequences cannot be handled by static networks; they at first need to be padded to same length. However, deployment of iterative loop depending on the length of input sequences in a batch allows us to easily work on variable-sized sequences when batch size is set to 1. 
 
 * The only difficulty with dynamic RNNs encountered by researchers and ML engineers in this point is time complexity. When input sequences are padded to same length, they can be vectorized, and fed to the network as a whole rather than one by one. Hence, static RNNs are quite faster than their dynamic version. 
+
+## Source Files
+
+- dynamic rnn/data_generator.py
+- dynamic rnn/main.py
+- static rnn/main.py
+
+To illustrate the behavior and some implementation details of both RNN architectures, a small project on sentiment classification problem is done with the help of IMDB dataset. Main files are in charge of loading the dataset, constructing the network, and launching training process. The only difference between them is what value "unroll" parameter of recurrent layer is set to, which actually controls static or dynamic execution. Dynamic rnn folder contains extra one source file, called "data_generator.py". This source file helps to prepare custome batches and then serve for the network. The main reason why tranditional batch structure cannot be used is the fact that sequences are of different length. 
+
+## Used Libraries
+
+* Tensorflow
+* Keras
+* Numpy
